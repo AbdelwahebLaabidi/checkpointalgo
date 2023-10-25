@@ -1,4 +1,4 @@
-PROCEDURE dot_product( VAR v1, v2 : ARRAY_OF INTEGER[];) : INTEGER
+PROCEDURE dot_product( v1, v2 : ARRAY_OF INTEGER[] , VAR ps : INTEGER)
 VAR
     ps : INTEGER := 0;
 BEGIN
@@ -16,7 +16,7 @@ BEGIN
     IF (v1.length <> v2.length OR v1.length < 2 OR v1.length > 3) THEN
         Write (" on ne peux pas calculer")
     ELSE
-        resultat := dot_product(v1, v2);
+        dot_product(v1, v2, resultat);
     END_IF
     IF (resultat = 0) THEN
         Write ("orthogonal")
